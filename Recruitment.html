@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recruitment | SafeWork Connect</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #E8F5E9;
+      color: #1B5E20;
+      text-align: center;
+      padding: 2rem;
+      margin: 0;
+    }
+
+    header {
+      background: #1B5E20;
+      color: white;
+      padding: 1rem;
+    }
+
+    .job-form {
+      background: white;
+      max-width: 400px;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, button {
+      padding: 0.8rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: #2E7D32;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #1B5E20;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header><h1>Empowerment Through Work</h1></header>
+
+  <p>Apply for verified opportunities from safe, trusted employers.</p>
+
+  <form class="job-form" id="jobForm">
+    <input type="text" id="name" placeholder="Full Name" required />
+    <input type="email" id="email" placeholder="Email Address" required />
+    <input type="file" id="resume" accept=".pdf,.doc,.docx" required />
+    <button type="submit">Submit Application</button>
+  </form>
+
+  <a href="index.html" class="back-btn">← Back to Dashboard</a>
+
+  <script>
+    const form = document.getElementById('jobForm');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Your application has been submitted successfully!');
+      form.reset();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NGO Sponsorship | SafeWork Connect</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #FFF3E0;
+      color: #E65100;
+      margin: 0;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    header {
+      background: #E65100;
+      color: white;
+      padding: 1rem;
+    }
+
+    .ngo-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .ngo-card {
+      background: white;
+      width: 250px;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .ngo-card:hover {
+      transform: scale(1.05);
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      color: #E65100;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header><h1>Our Partner NGOs</h1></header>
+  <p>Meet the organizations that make empowerment possible through SafeWork Connect.</p>
+
+  <div class="ngo-list" id="ngoList"></div>
+
+  <a href="index.html" class="back-btn">← Back to Dashboard</a>
+
+  <script>
+    const ngos = [
+      { name: "Women’s Safe Future", desc: "Provides trauma counseling and business training." },
+      { name: "Empower Africa", desc: "Funds vocational skills and digital literacy programs." },
+      { name: "Unity Foundation", desc: "Supports survivor-led initiatives and education access." }
+    ];
+
+    const list = document.getElementById('ngoList');
+    ngos.forEach(ngo => {
+      const card = document.createElement('div');
+      card.classList.add('ngo-card');
+      card.innerHTML = `<h3>${ngo.name}</h3><p>${ngo.desc}</p>`;
+      list.appendChild(card);
+    });
+  </script>
+</body>
+</html>
