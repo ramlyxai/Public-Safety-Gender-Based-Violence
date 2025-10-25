@@ -39,7 +39,7 @@ document.querySelectorAll('.dropdown-content a').forEach(link => {
       targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
-    // Optional: close dropdown if open (for mobile)
+    //  close dropdown if open (for mobile)
     const dropdown = document.querySelector('.dropdown-content');
     if (dropdown) dropdown.classList.remove('show');
   });
@@ -65,3 +65,41 @@ document.querySelectorAll('.dropdown-content a').forEach(link => {
   document.getElementById('safety').addEventListener('click', () => {
     window.location.href = "safety.html";
   });
+
+
+
+
+
+  // this is for our repository
+function goToRepo(person) {
+const repos = {
+  raymond: "https://github.com/RaymondMukonda",
+  mamatli: "https://github.com/MsKabi" // Replace with her actual GitHub username
+};
+
+if (repos[person]) {
+  window.open(repos[person], "_blank");
+} else {
+  alert("Repository not found.");
+}
+}
+
+
+// redirect
+
+// Wait for the page to load
+document.addEventListener("DOMContentLoaded", function() {
+  // Select all category cards
+  const cards = document.querySelectorAll(".category-card");
+
+  // Add click event to each card
+  cards.forEach(card => {
+    card.addEventListener("click", function() {
+      // Show alert message first
+      alert("Please sign in to use this feature.");
+
+      // Redirect to login page after alert
+      window.location.href = "login.html";
+    });
+  });
+});

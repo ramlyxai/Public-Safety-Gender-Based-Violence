@@ -1,73 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login | SafeWork Connect</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .back-btn {
-      display: inline-block;
-      margin-bottom: 1rem;
-      color: #1A237E;
-      text-decoration: none;
-      font-weight: bold;
-      border: 2px solid #1A237E;
-      padding: 6px 14px;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
-    .back-btn:hover {
-      background: #1A237E;
-      color: white;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Connect</title>
+    <link rel="stylesheet" href="styles/login_styles.css">
+    <script src="scripts/login_scripts.js" defer></script>
 </head>
 <body>
-  <div class="auth-page">
-    <div class="auth-container">
-      <h2>Login to SafeWork Connect</h2>
-      <form id="loginForm">
-        <input type="email" id="loginEmail" placeholder="Email" required />
-        <input type="password" id="loginPassword" placeholder="Password" required />
-
-        <div class="btn-container">
-          <button type="button" class="btn back" onclick="goBack()">Back</button>
-          <button type="submit" class="btn primary">Login</button>
+    <div class="container">
+        <div class="form-box active" id="login-form">
+            <form action="" method="POST" autocomplete="on">
+                <h2>Login</h2>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit" name="Login">Login</button>
+                <p>Don't have an account? <a href="#" onclick="showForm('registe-form')">Register</a></p>
+            </form>
         </div>
 
-        <p>Don’t have an account? <a href="signup.html">Sign up here</a></p>
-      </form>
+        <div class="form-box" id="registe-form" >
+            <form action="" method="POST" autocomplete="on">
+                <h2>Register</h2>
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit" name="register">Register</button>
+                <p>Already have an account? <a href="#" onclick="showForm('login-form')">Login</a></p>
+            </form>
+        </div>
     </div>
-  </div>
-
-  <script>
-    function goBack() {
-      if (document.referrer) {
-        window.history.back();
-      } else {
-        window.location.href = "index.html";
-      }
-    }
-
-    const loginForm = document.getElementById("loginForm");
-
-    loginForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-
-      const enteredEmail = document.getElementById("loginEmail").value.trim();
-      const enteredPassword = document.getElementById("loginPassword").value.trim();
-
-      const savedEmail = localStorage.getItem("userEmail");
-      const savedPassword = localStorage.getItem("userPassword");
-
-      if (enteredEmail === savedEmail && enteredPassword === savedPassword) {
-        alert("Login successful!");
-        window.location.href = "dashboard.html";
-      } else {
-        alert("Incorrect email or password. Please try again.");
-      }
-    });
-  </script>
 </body>
 </html>

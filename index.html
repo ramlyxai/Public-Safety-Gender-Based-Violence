@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SafeWork Connect</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Safe Connect</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <script src="scripts/script.js" defer></script>
 </head>
 
 <body>
-  <!-- Navigation -->
+
    <header>
   <nav class="navbar">
-    <div class="logo">SafeWork Connect</div>
+    <div  class="logo">Safe Connect</div>
 
-    <!-- Hamburger icon (only shows on mobile) -->
     <div class="menu-toggle" id="menu-toggle">&#9776;</div>
 
     <ul class="nav-links" id="nav-links">
@@ -31,24 +31,26 @@
   </nav>
 </header>
 
-<!-- Info Section -->
+
 <section id="info-section" class="intro-section">
   <h1>Explore Our Programs</h1>
-  <img src="New folder/New folder/Ngo 1.jpg" alt="Help the world connect together" />
+
+  <img src="images/Ngo 1.jpg" alt="Help the world connect together">
   <p id="info-text">
-    Discover how SafeWork Connect promotes empowerment, safety, and economic resilience through these initiatives.
+    We believe no one should face abuse alone. Our platform offers a safe, anonymous space where survivors, supporters, and professionals can connect, share, and heal. Whether you're seeking guidance, reporting an incident, or simply looking for someone who understands, were here to listen and help. Through curated resources, peer support, and direct access to trusted organizations, we empower individuals to take the next step—at their own pace, in their own way.
+
+    At Safe Connect, we're building more than a website—we're creating a lifeline. Our platform offers a safe, anonymous space for individuals affected by workplace abuse to speak up, seek help, and find solidarity. Whether you're reporting an incident, exploring your rights, or simply looking for someone who understands, we connect you with trusted resources, peer support, and professional guidance. Every story matters. Every voice deserves to be heard. And here, you're never alone.
   </p>
 </section>
 
-  <!-- Categories Section -->
+
   <section class="dashboard">
   <div class="categories">
 
-    <!-- Join Chat Room -->
     <div class="category-card" id="chat">
-      <img src="New folder/New folder/chat room1.jpg" alt="Join Chat Room" />
+      <img src="images/chat room1.jpg" alt="Join Chat Room"/>
       <div class="category-info">
-        <h3>Join Chat Room</h3>
+        <h3 >Join Chat Room</h3>
         <p>
           Connect safely and anonymously with counselors, mentors, and fellow survivors.
           Our moderated chat rooms create a secure space for sharing experiences and emotional support.
@@ -56,9 +58,9 @@
       </div>
     </div>
 
-    <!-- Recruitment Program -->
+
     <div class="category-card" id="recruit">
-      <img src="New folder/New folder/recruitment program.jpg" alt="Recruitment Program" />
+      <img src="images/recruitment program.jpg" alt="Recruitment Program" >
       <div class="category-info">
         <h3>Recruitment Program</h3>
         <p>
@@ -68,11 +70,11 @@
       </div>
     </div>
 
-    <!-- NGO Sponsorship -->
+
     <div class="category-card" id="ngo">
-      <img src="New folder/New folder/Ngo 3.jpg" alt="NGO Sponsorship" />
+      <img src="images/Ngo 3.jpg" alt="NGO Sponsorship" >
       <div class="category-info">
-        <h3>NGO Sponsorship</h3>
+        <h3 onclick="requireLogin('sponsor')">NGO Sponsorship</h3>
         <p>
           Partner with NGOs that fund skills training and advocacy programs.
           Together, we empower communities and break the cycle of abuse.
@@ -80,11 +82,10 @@
       </div>
     </div>
 
-    <!-- Public Safety -->
     <div class="category-card" id="safety">
-      <img src="New folder/New folder/PUBLIC SAFETY.jpg" alt="Public Safety" />
+      <img src="images/PUBLIC SAFETY.jpg" alt="Public Safety" >
       <div class="category-info">
-        <h3>Public Safety</h3>
+        <h3 >Public Safety</h3>
         <p>
           Stay informed on safety alerts, report incidents, and collaborate on initiatives
           that make neighborhoods safer and more inclusive for everyone.
@@ -95,16 +96,22 @@
   </div>
 </section>
 
-  <!-- Collaborators -->
+
   <section class="collaborators">
     <h2>Our Collaborators</h2>
     <div class="logos">
-      <img src="New folder/New folder/Bugzz.jpg" alt="Raymond's Github" />
-      <img src="New folder/New folder/Matty.jpeg" alt="Mammatli's Github" />
+      <img src="images/Bugzz.jpg" alt="Raymond's Github" onclick="goToRepo('raymond')">
+       <a href="#"  class="link-clean" onclick="goToRepo('raymond')">Rammy</a>
+
+      <a href="#"  class="link-clean" onclick="goToRepo('mamatli')">Matty</a>
+      <img src="images/Matty.jpeg" alt="Mammatli's Github" onclick="goToRepo('mamatli')" >
+
+
+
     </div>
   </section>
 
-  <!-- About Us -->
+
   <section class="about">
     <h2>About Us</h2>
     <p>
@@ -118,11 +125,11 @@
     </div>
   </section>
 
-  <!-- Footer -->
+ 
   <footer>
     <p>© 2025 SafeWork Connect | Built with ❤️ for community empowerment</p>
   </footer>
 
-  <script src="script.js"></script>
+  
 </body>
 </html>
