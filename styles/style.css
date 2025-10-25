@@ -308,6 +308,20 @@ html {
 }
 
 /* ===== DASHBOARD / CATEGORIES ===== */
+
+.category-card {
+  text-decoration: none;
+  color: #000000;
+}
+
+.category-info h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #31d3df; /* Deep purple, adjust to match your theme */
+  letter-spacing: 0.5px;
+}
+
 .dashboard {
   padding: 3rem 2rem;
   text-align: center;
@@ -345,10 +359,10 @@ html {
   padding: 1.5rem;
 }
 
-.category-info h3 {
+/* .category-info h3 {
   color: #6A1B9A;
   margin-bottom: 0.5rem;
-}
+} */
 
 .category-info p {
   font-size: 0.95rem;
