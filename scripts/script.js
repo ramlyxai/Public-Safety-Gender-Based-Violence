@@ -45,12 +45,7 @@ document.querySelectorAll('.dropdown-content a').forEach(link => {
   });
 });
 
-  // Redirect if not logged in
-  const email = localStorage.getItem("userEmail");
-  if (!email) {
-    alert("Please log in first.");
-    window.location.href = "login.html";
-  }
+
 
   // Add click handlers for the category cards
   document.getElementById('chat').addEventListener('click', () => {
@@ -85,21 +80,3 @@ if (repos[person]) {
 }
 
 
-// redirect
-
-// Wait for the page to load
-document.addEventListener("DOMContentLoaded", function() {
-  // Select all category cards
-  const cards = document.querySelectorAll(".category-card");
-
-  // Add click event to each card
-  cards.forEach(card => {
-    card.addEventListener("click", function() {
-      // Show alert message first
-      alert("Please sign in to use this feature.");
-
-      // Redirect to login page after alert
-      window.location.href = "login.html";
-    });
-  });
-});

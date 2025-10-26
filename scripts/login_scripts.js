@@ -11,7 +11,7 @@ function showForm(formId) {
   document.querySelectorAll(".form-box").forEach(form => {
     form.classList.remove("active");
   });
-  document.getElementById(formId).classList.add("active");
+//   document.getElementById(formId).classList.add("active");
 
   // Save the active form ID
   localStorage.setItem("activeForm", formId);
@@ -31,7 +31,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// // save input
+// save input
 document.querySelectorAll("input").forEach(input => {
   input.addEventListener("input", () => {
     localStorage.setItem(input.name, input.value);
@@ -93,3 +93,33 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+
+
+
+// redirect
+
+// Wait for the page to load
+document.addEventListener("DOMContentLoaded", function() {
+  // Select all category cards
+  const cards = document.querySelectorAll(".category-card");
+
+  // Add click event to each card
+  cards.forEach(card => {
+    card.addEventListener("click", function() {
+      // Show alert message first
+      alert("Please sign in to use this feature.");
+
+      // Redirect to login page after alert
+      window.location.href = "login.html";
+    });
+  });
+});
+
+
+// Redirect if not logged in
+const email = localStorage.getItem("userEmail");
+if (!email) {
+  alert("Please log in first.");
+  window.location.href = "login.html";
+}
