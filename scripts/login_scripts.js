@@ -117,9 +117,9 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-// Redirect if not logged in
-const email = localStorage.getItem("userEmail");
-if (!email) {
-  alert("Please log in first.");
-  window.location.href = "login.html";
-}
+// // Redirect if not logged in
+// const email = localStorage.getItem("userEmail");
+// if (!email) {
+//   alert("Please log in first.");
+//   window.location.href = "login.html";
+// }
